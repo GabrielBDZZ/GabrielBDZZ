@@ -2,7 +2,7 @@
 
 Meu nome é Gabriel Bondezan Amianti e sou completamente apaixonado por tecnologia, estudando na área desde 2022.
 
-Atualmente realizo projetos em HTML, CSS e JavaScript, me arriscando e estudando também na área mobile, com react-native. No meu perfil você encontrará tanto projetos de estudos e cursos passados, quanto projetos pessoais também, todos com códigos de minha autoria. :grinning:
+Atualmente realizo projetos em React me. No meu perfil você encontrará tanto projetos de estudos e cursos passados, quanto projetos pessoais também, todos com códigos de minha autoria. :grinning:
 
 <br>
 
