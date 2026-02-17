@@ -32,14 +32,15 @@ Sou um profissional apaixonado por tecnologia, com trajetória iniciada em 2022.
 ## 📊 Estatísticas & Performance
 
 <div align="center">
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=GabrielBDZZ&show_icons=true&theme=synthwave&include_all_commits=true&count_private=true&hide_border=true" alt="Status do GitHub de Gabriel" />
+<img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=GabrielBDZZ&show_icons=true&theme=synthwave&include_all_commits=true&count_private=true&hide_border=true" />
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=GabrielBDZZ&layout=compact&langs_count=8&theme=synthwave&hide_border=true" alt="Linguagens mais usadas" />
+<img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=GabrielBDZZ&layout=compact&langs_count=8&theme=synthwave&hide_border=true" />
 </div>
 
 <div align="center">
-<img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=GabrielBDZZ&theme=synthwave&hide_border=true" alt="Sequência de contribuições" />
+<img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=GabrielBDZZ&theme=synthwave&hide_border=true" />
 </div>
+</br>
 
 ---
 
