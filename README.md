@@ -47,16 +47,14 @@ Sou um profissional apaixonado por tecnologia, com trajetória iniciada em 2022.
 ## 📫 Conecte-se Comigo
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/gabriel-bondezan-amianti-44b54419b/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="https://www.instagram.com/biimbondezan/" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
-  </a>
+<a href="https://www.linkedin.com/in/gabriel-bondezan-amianti-44b54419b/" target="_blank">
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+<a href="https://www.instagram.com/biimbondezan/" target="_blank">
+<img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+</a>
 </div>
 
-<br/>
-
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=GabrielBDZZ&color=rebeccapurple&style=flat-square&label=PROFILE+VIEWS" alt="GabrielBDZZ" />
+<img src="https://komarev.com/ghpvc/?username=GabrielBDZZ&color=6366f1&style=flat-square&label=PROFILE+VIEWS" />
 </div>
