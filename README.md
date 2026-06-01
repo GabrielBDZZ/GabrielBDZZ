@@ -1,6 +1,6 @@
 # Olá, eu sou o Gabriel Bondezan Amianti 👋
 
-### Head de AI | Software Developer | IT Specialist
+### Software Developer | IT Specialist
 
 Sou um profissional apaixonado por tecnologia, com trajetória iniciada em 2022. Atualmente, foco meu desenvolvimento em ecossistemas modernos de IA e desenvolvimento Web avançado, unindo visão estratégica e execução técnica.
 
@@ -8,7 +8,7 @@ Sou um profissional apaixonado por tecnologia, com trajetória iniciada em 2022.
 
 ## 🚀 Sobre Mim
 
-- 🔭 Atualmente trabalhando como **Head de AI**, **FullStack Developer** e liderando projetos de inovação.
+- 🔭 Atualmente trabalhando como **Desenvovledor de AI**, **FullStack Developer** e liderando projetos de inovação.
 - ⚛️ Especialista em **React**, com foco em aplicações performáticas e escaláveis.
 - 🛠️ Experiência sólida em administração de TI, Redes (Apache/Subdomínios) e Automação (API Slack).
 - 🎓 Constantemente me aprimorando em **Data Science** e **Inteligência Artificial**.
