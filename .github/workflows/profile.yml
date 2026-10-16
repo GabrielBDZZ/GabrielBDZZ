@@ -25,37 +25,18 @@ jobs:
         with:
           ref: ${{ github.ref_name }} # ponta da branch, não o commit que disparou a execução
 
-      # Diagnóstico: mostra se o PAT chegou e o que ele enxerga (só contagens e linguagens;
-      # nada de token ou nome de repositório, porque o log de repositório público é público).
-      - name: Verifica o token
-        env:
-          PAT: ${{ secrets.PROFILE_3D_TOKEN }}
-          OWNER: ${{ github.repository_owner }}
-        run: |
-          if [ -z "$PAT" ]; then
-            echo "::warning::PROFILE_3D_TOKEN não chegou ao workflow; usando o token padrão (só repositórios públicos)."
-            exit 0
-          fi
-          echo "Secret recebido (${#PAT} caracteres, prefixo ${PAT:0:4})"
-          echo "Escopos: $(curl -sI -H "Authorization: bearer $PAT" https://api.github.com/user | grep -i '^x-oauth-scopes:' | cut -d' ' -f2- | tr -d '\r')"
-          Q='query($login:String!){ viewer { login } user(login:$login){ contributionsCollection { totalCommitContributions restrictedContributionsCount commitContributionsByRepository(maxRepositories:100){ repository { isPrivate primaryLanguage { name } } contributions { totalCount } } } } }'
-          jq -n --arg q "$Q" --arg login "$OWNER" '{query:$q, variables:{login:$login}}' \
-            | curl -s -H "Authorization: bearer $PAT" -X POST -d @- https://api.github.com/graphql \
-            | jq '{
-                autenticado_como: .data.viewer.login,
-                erros: [.errors[]?.message],
-                commits: .data.user.contributionsCollection.totalCommitContributions,
-                restritas: .data.user.contributionsCollection.restrictedContributionsCount,
-                repos_privados_visiveis: ([.data.user.contributionsCollection.commitContributionsByRepository[]? | select(.repository.isPrivate)] | length),
-                commits_por_linguagem: ([.data.user.contributionsCollection.commitContributionsByRepository[]? | {l: (.repository.primaryLanguage.name // "sem linguagem"), n: .contributions.totalCount}] | group_by(.l) | map({(.[0].l): (map(.n) | add)}) | add)
-              }'
-
       - uses: yoshi389111/github-profile-3d-contrib@v0.9.3
         env:
-          # PAT (classic, escopo "repo") para enxergar os repositórios privados;
-          # sem ele, cai no token padrão e só conta repositórios públicos.
-          GITHUB_TOKEN: ${{ secrets.PROFILE_3D_TOKEN || secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
+
+      # A API de contribuições esconde os repositórios privados até do próprio dono,
+      # então a pizza de linguagens e o eixo "Commit" são refeitos pelo histórico de commits.
+      - name: Linguagens reais (inclui repositórios privados)
+        env:
+          GH_TOKEN: ${{ secrets.PROFILE_3D_TOKEN }} # PAT classic com escopo "repo"
+          COMMIT_EMAILS: ${{ secrets.COMMIT_EMAILS }} # opcional: e-mails dos seus commits
+        run: python3 .github/scripts/linguagens_3d.py profile-3d-contrib
 
       - name: Commit e push
         run: |
